@@ -2,7 +2,7 @@
 
 const promise1 = new Promise((resolve) => {
   document.querySelector('.logo').addEventListener('click', () => {
-    resolve('logo clicked!');
+    resolve();
   });
 });
 
@@ -12,7 +12,7 @@ promise1.then(() => {
 
 const promise2 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    reject(new Error('Promise 2 rejected: Timeout after 3 seconds'));
+    reject(new Error());
   }, 3000);
 });
 
