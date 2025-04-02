@@ -1,4 +1,5 @@
 'use strict';
+/* eslint-disable prefer-promise-reject-errors */
 
 const promise1 = new Promise((resolve) => {
   document.querySelector('.logo').addEventListener('click', () => {
@@ -12,7 +13,7 @@ promise1.then(() => {
 
 const promise2 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    reject(new Error());
+    reject();
   }, 3000);
 });
 
